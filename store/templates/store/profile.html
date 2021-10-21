@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+{% comment %} <link rel="stylesheet" href='static/store/css/style.css'> {% endcomment %}
+<link rel="stylesheet" href="static/store/css/signup.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/store/css/home.css" />
+{% endblock css %}
+
+{% block content %}
+
+<div >
+
+<div class="vh-100  gradient-custom">
+  <div class="container py-0 h-100">
+    
+    <div class="row py-0 mx-2 mb-5">
+
+    <div class="card mx-2 pt-2">
+
+      
+      <img class="" src="{{user_profile.image}}" alt="...">
+    
+    </div>
+
+<div class="container">
+        <div class="row pt-3 py-2">
+            <div class="col">
+                <h4>First Name</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.first_name}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Second Name</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.last_name}}</h4>
+            </div>
+        </div>
+
+         <div class="row py-2">
+            <div class="col">
+                <h4>Username</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.username}}</h4>
+            </div>
+        </div>
+
+
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Email Address</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.email}}</h4>
+            </div>
+        </div>
+
+
+        <div class="row py-2">
+            <div class="col">
+                <h4> Address</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.address}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Pincode</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.pincode}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>State</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.state}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>City</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.city}}</h4>
+            </div>
+        </div>
+      </div>    
+ 
+  </div>
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="static/store/css/blog.css" />
+{% endblock css %} {% block content %}
+
+<div>
+  <div>
+    <header class="py-2 bg-light border-bottom mb-5">
+      <div class="container">
+        <div class="text-center my-2">
+          <p class="lead mb-0">All Post Written By</p>
+          <h1 class="fw-bolder">{{user.username}}</h1>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-8">
+        <!-- Featured blog post-->
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          {% for mh in mypost %}
+          <div class="col-lg-6">
+            <!-- Blog post-->
+
+            <div class="card mb-4">
+              <a href=""
+                ><img class="card-img-top" src="{{mh.image}}" alt="..."
+              /></a>
+              <div class="card-body">
+                <div class="small text-muted">{{mh.id}}</div>
+                <h2 class="card-title h4">{{mh.title}}</h2>
+                <p class="card-text">{{mh.summary|truncatewords:15}}</p>
+                <a class="btn btn-primary" href="/postview/{{mh.id}}"
+                  >Read more {{mh.id}}</a
+                >
+                <a class="btn btn-primary" href="/updatepost/{{mh.id}}"
+                  >update {{mh.id}}</a
+                >
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Side widgets-->
+      <div class="col-lg-4">
+        <!-- Side widget-->
+        <div class="card mb-4">
+          <div class="card-header">Posts</div>
+          <a class="btn btn-primary border-bottom" href="{% url 'newpost' %}"
+            >Create New Post→</a
+          >
+        </div>
+
+        <!-- Categories widget-->
+        <div class="card mb-4">
+          <div class="card-header">Categories</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="row-sm-6">
+                <li class="list-unstyled mb-0">
+                  <a class="btn btn-primary p-2 border-bottom" href="#!"
+                    >Mental Health</a
+                  >
+                  <a class="btn btn-primary p-2 border-bottom" href="#!"
+                    >Heart Disease</a
+                  >
+                  <a class="btn btn-primary p-2 border-bottom" href="#!"
+                    >Covid19</a
+                  >
+                  <a class="btn btn-primary p-2 border-bottom" href="#!"
+                    >Immunization</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ATG 2021</p>
+    </div>
+  </footer>
+</div>
+ {% endblock content %}

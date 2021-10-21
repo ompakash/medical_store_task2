@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block css %}
+<link rel="stylesheet" href="static/store/css/login.css" />
+<link rel="stylesheet" href="static/store/css/signup.css" />
+{% endblock css %}
+
+
+{% block content %}
+<div class="vh-100 gradient-custom">
+<div class="container login-container  ">
+            <div class="row">
+                <div class="col-md-6 login-form-1 mt-5">
+                    <h3 class="btnSubmit">Doctor Login</h3>
+                    <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="doctor" value="doctor"/>
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control" placeholder="Your username *" name="usernameL" value="" />
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="password" class="form-control" placeholder="Your Password *" name="passwordL" value="" />
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        
+
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2 gradient-custom mt-5">
+                    <h3 class="btnSubmit">Patient Login</h3>
+                    <form method='post'>
+                    {% csrf_token %}
+                    <input type="hidden" name="patient" value="patient"/>
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control" placeholder="Your username *" name="usernameL" value="" />
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="password" class="form-control" placeholder="Your Password *" name="passwordL" value="" />
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock content %}

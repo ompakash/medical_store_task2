@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h2>These are your deatils: </h2>
+
+    <div class="container">
+
+        
+
+        <div class="text-center">
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="{{user_profile.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Your Image</p>
+                </div class="">
+            </div>
+        </div>
+<hr>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>First Name</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.first_name}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Second Name</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.last_name}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Username</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.username}}</h4>
+            </div>
+        </div>
+
+
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Email Address</h4>
+            </div>
+            <div class="col">
+                <h4>{{user.email}}</h4>
+            </div>
+        </div>
+
+
+        <div class="row py-2">
+            <div class="col">
+                <h4> Address</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.address}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>Pincode</h4>
+            </div>
+            <div class="col">
+                <h4>{{user_profile.pincode}}</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>State</h4>
+            </div>
+            <div class="col">
+                <h4>State</h4>
+            </div>
+        </div>
+
+        <div class="row py-2">
+            <div class="col">
+                <h4>City</h4>
+            </div>
+            <div class="col">
+                <h4>City</h4>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock content %}

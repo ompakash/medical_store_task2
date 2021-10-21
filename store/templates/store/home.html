@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+{% comment %} <link rel="stylesheet" href='static/store/css/style.css'> {% endcomment %}
+<link rel="stylesheet" href="static/store/css/signup.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/store/css/home.css" />
+{% endblock css %}
+
+{% block content %}
+
+<div class="vh-100 gradient-custom">
+  <div class="container py-5  h-100">
+    
+    <div class="row py-5 mb-5">
+
+    <div class="card">
+      
+      <h5 class='mt-5'>Doctor</h5>
+      
+      <img class="" src="{% static 'store/image/doc.jpeg' %}" alt="...">
+    
+      <a href="/login" class="mb-1" ><button>Log In</button></a>
+      <a href="/doctor" class="mb-5"><button >Register</button></a>
+    </div>
+
+    <div class="card">
+        
+        <h5 class="mt-5"> Patient</h5>
+        <img class="" src="{% static 'store/image/patient.jpeg' %}" alt="...">
+        
+        
+        <a href="/login" class="mb-1" ><button>Log In</button></a>
+        <a href="/patient" class="mb-5"><button>Register</button></a>
+
+      </div>
+</div>
+    
+  </div>
+</div>
+    
+
+
+{% endblock content %}
+
+{% block addon %}
+{% comment %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {% endcomment %}
+{% endblock addon %}

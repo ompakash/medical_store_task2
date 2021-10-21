@@ -1,0 +1,160 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="static/store/css/blog.css" />
+{% endblock css %} {% block content %}
+
+<div>
+  <div>
+    <header class="py-1 bg-light border-bottom mb-4">
+      <div class="container">
+        <div class="text-center my-1">
+          <h1 class="fw-bolder">Welcome To ATG Blog</h1> 
+          <p class="lead mb-0">Read All The Post Written By Experts Doctors</p>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+
+  <div class="container">
+    <H2 class='mx-2 py-2'>MENTAL HEALTH</H2>
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-11">
+        <!-- Featured blog post-->
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          <!-- Mental Health -->
+          {% for mh in mentalhealth %}
+          <div class="col-lg-6">
+            <!-- Blog post-->
+
+            <div class="card mb-4">
+              <a href=""><img class="card-img-top" src="{{mh.image}}" alt="..." /></a>
+              <div class="card-body">
+                <div class="small text-muted">{{mh.id}}</div>
+                <h2 class="card-title h4">{{mh.title|truncatewords:5}}</h2>
+                <p class="card-text">{{mh.summary|truncatewords:15}}</p>
+                <a class="btn btn-primary" href="/postview/{{mh.id}}">Read more {{mh.id}}</a>
+                {% if user.is_staff %}
+                <a class="btn btn-primary" href="/updatepost/{{mh.id}}">update {{mh.id}}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+    <H2 class='mx-2 py-2'>IMMUNIZATION</H2>
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-11">
+        <!-- Featured blog post-->
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          <!-- Mental Health -->
+          {% for mh in immunization %}
+          <div class="col-lg-6">
+            <!-- Blog post-->
+
+            <div class="card mb-4">
+              <a href=""><img class="card-img-top" src="{{mh.image}}" alt="..." /></a>
+              <div class="card-body">
+                <div class="small text-muted">{{mh.id}}</div>
+                <h2 class="card-title h4">{{mh.title|truncatewords:5}}</h2>
+                <p class="card-text">{{mh.summary|truncatewords:15}}</p>
+                <a class="btn btn-primary" href="/postview/{{mh.id}}">Read more {{mh.id}}</a>
+                {% if user.is_staff %}
+                <a class="btn btn-primary" href="/updatepost/{{mh.id}}">update {{mh.id}}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+    </div>
+
+    <H2 class='mx-2 py-2'>HEART DISEASE</H2>
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-11">
+        <!-- Featured blog post-->
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          <!-- Mental Health -->
+          {% for mh in heartdisease %}
+          <div class="col-lg-6">
+            <!-- Blog post-->
+
+            <div class="card mb-4">
+              <a href=""><img class="card-img-top" src="{{mh.image}}" alt="..." /></a>
+              <div class="card-body">
+                <div class="small text-muted">{{mh.id}}</div>
+                <h2 class="card-title h4">{{mh.title|truncatewords:5}}</h2>
+                <p class="card-text">{{mh.summary|truncatewords:15}}</p>
+                <a class="btn btn-primary" href="/postview/{{mh.id}}">Read more {{mh.id}}</a>
+                {% if user.is_staff %}
+                <a class="btn btn-primary" href="/updatepost/{{mh.id}}">update {{mh.id}}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+    </div>
+
+    
+    <H2 class='mx-2 py-2'>COVID19</H2>
+    <div class="row">
+      <!-- Blog entries-->
+      <div class="col-lg-11">
+        <!-- Featured blog post-->
+
+        <!-- Nested row for non-featured blog posts-->
+        <div class="row">
+          <!-- Mental Health -->
+          {% for mh in covid19 %}
+          <div class="col-lg-6">
+            <!-- Blog post-->
+
+            <div class="card mb-4">
+              <a href=""><img class="card-img-top" src="{{mh.image}}" alt="..." /></a>
+              <div class="card-body">
+                <div class="small text-muted">{{mh.id}}</div>
+                <h2 class="card-title h4">{{mh.title|truncatewords:5}}</h2>
+                <p class="card-text">{{mh.summary|truncatewords:15}}</p>
+                <a class="btn btn-primary" href="/postview/{{mh.id}}">Read more {{mh.id}}</a>
+                {% if user.is_staff %}
+                <a class="btn btn-primary" href="/updatepost/{{mh.id}}">update {{mh.id}}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ATG 2021</p>
+    </div>
+  </footer>
+</div>
+
+
+{% endblock content %}

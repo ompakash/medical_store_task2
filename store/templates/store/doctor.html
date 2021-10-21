@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="static/store/css/signup.css" />
+{% endblock css %}
+
+{% block content %}
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-0 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px">
+          <div class="card-body p-4 p-md-3">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-3">Doctor Registration</h3>
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="firstName" placeholder="First Name" name="firstname"
+                      class="form-control form-control-lg" required />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="lastName" name="lastname" placeholder="Last Name"
+                      class="form-control form-control-lg" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" placeholder="Username" name="username" class="form-control form-control-lg"
+                      id="username" required />
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+
+
+                  <div class="form-outline">
+                    <input type="file" class="form-control" id="customFile" name="image" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="email" placeholder="name@email.com" id="emailAddress"
+                      class="form-control form-control-lg" name="email" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="password" placeholder="Password" id="password" class="form-control form-control-lg"
+                      name="password" required />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="password" id="confirmpassword" placeholder="Confirm Password "
+                      class="form-control form-control-lg" name="confirmpassword" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-9 mb-4">
+                  <div class="form-outline">
+                    <input type="text" placeholder="address" id="address" class="form-control form-control-lg"
+                      name="address" required />
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <input type="text" placeholder="800001" id="pincode" class="form-control form-control-lg"
+                      name="pincode" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" placeholder="state" id="state" class="form-control form-control-lg" name="state"
+                      required />
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" placeholder="city" id="city" class="form-control form-control-lg" name="city"
+                      required />
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="mt-0 pt-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Sign Up" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
